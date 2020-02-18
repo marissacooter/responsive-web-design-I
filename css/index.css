@@ -60,23 +60,23 @@ h1, h2, h3, h4, h5 {
 }
 /* Copy and paste your work from yesterday here and start to refactor into flexbox */
 .container {
-	width: 880px;
+	width: 100%;
 	/* TB LR */
-	margin: 0 auto;
+    margin: 0 auto;
+
   }
   /* header */
   header {
-	  width: 880px;
-	  margin: 0 auto;
+	  width: 100%;
 	  display: flex;
 	  justify-content: space-evenly;
   }
-  header nav {
+  header nav {  
 	vertical-align: top;
-	margin-top: 35px;
+    margin-top: 35px;
+    width: 70%;
   }
   header nav a {
-	margin-right: 65px;
 	font-size: 14px;
 	color: gray;
 	text-decoration: none;
@@ -123,7 +123,8 @@ h1, h2, h3, h4, h5 {
 	justify-content: space-evenly;
   }
   .main-content .middle-img {
-	margin-top: 45px;
+    margin-top: 45px;
+    max-width: 100%;
   }
 .bottom-content {
 	display: flex;
@@ -163,14 +164,14 @@ h1 {
 	margin-right: 30px;
 	padding-top: 35px;
   }
-  .textcontent {
+  /* .textcontent {
 	  border: 1px solid black;
 	  background: lavender;
-	  width: 400px;
+	  width: 100%;
 	  height: 230px;
 	  margin-bottom: 40px;
 	  padding: 10px;
-  }
+  } */
   button {
 	background: white;
 	vertical-align: top;
@@ -205,12 +206,34 @@ h1 {
     }
   }
 
-  @media(max-width:500px){
-      body {
-          background-color: pink;
+  @media only screen and (max-width: 500px){
+     .circle {
+          display: none;
       }
-      .circle {
-          visibility: hidden;
+      header nav .links{
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        /* padding: 5%;
+        margin: 20%; */
+        color: gray;
+        font-size: 20px;
+        border-top: 2px solid gray;
+        border-bottom: 2px solid gray;
+        padding: 15px;
+      }
+      .top-content {
+          flex-wrap: wrap;
+          width: 100%;
+          margin-bottom: 12px;
+      }
+      .bottom-content {
+          flex-wrap: wrap;
+          width: 100%;
+          margin-bottom: 12px;
       }
   }
 
+  .main-content .middle-img {
+      max-width: 100%;
+  }
